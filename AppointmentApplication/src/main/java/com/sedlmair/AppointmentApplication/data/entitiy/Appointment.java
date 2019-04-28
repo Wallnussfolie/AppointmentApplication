@@ -15,7 +15,7 @@ public class Appointment {
 	
 	// attributes
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="APPOINTMENT_ID")
 	private int appointmentID;
 	@Column(name="APPOINTMENT_DATE")

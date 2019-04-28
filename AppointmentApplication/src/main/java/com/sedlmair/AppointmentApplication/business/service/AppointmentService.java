@@ -27,6 +27,15 @@ public class AppointmentService {
 		
 	}
 	
+	public Appointment saveAppointment(Appointment appointment) {
+		
+		this.appointmentRepository.save(appointment);
+		
+		
+		return appointment;
+		
+	}
+	
 	
 
 }
