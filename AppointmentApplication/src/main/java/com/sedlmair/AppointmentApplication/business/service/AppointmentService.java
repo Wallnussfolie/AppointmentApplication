@@ -1,6 +1,7 @@
 package com.sedlmair.AppointmentApplication.business.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,6 +34,20 @@ public class AppointmentService {
 		
 		
 		return appointment;
+		
+	}
+	
+	public Boolean deleteAppointmentById(long id) {
+		
+		try {
+			this.appointmentRepository.deleteById(id);
+		} 
+		catch(IllegalArgumentException iae)
+		{
+			return false;
+		}
+		
+		return true;
 		
 	}
 	
